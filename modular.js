@@ -7,13 +7,17 @@ function filter(pathName, extension, callback) {
       return callback(err);
     }
 
-    var result = [];
+    // var result = [];
 
-    list.forEach(function(file) {
-      if (path.extname(file) === '.' + extension) {
-        result.push(file)
-      }
-    });
+    // list.forEach(function(file) {
+    //   if (path.extname(file) === '.' + extension) {
+    //     result.push(file)
+    //   }
+    // });
+
+    var result = list.filter(function(file) {
+      return path.extname(file) === '.' + extension
+    })
 
     callback(err, result)
   });
