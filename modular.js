@@ -13,6 +13,8 @@ function filter(pathName, extension, callback) {
     //   if (path.extname(file) === '.' + extension) {
     //     result.push(file)
     //   }
+
+
     // });
 
     var result = list.filter(function(file) {
